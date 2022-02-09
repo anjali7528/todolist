@@ -1,0 +1,166 @@
+body{
+    margin:0;
+    background-color: #051821 ;
+}
+
+.square{
+  margin: auto;
+  margin-top:3% ;
+  width: 50%;
+  border: 5px solid #F58800;
+  padding: 10px;
+  background-color: white;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+   margin-top:2%;
+}
+
+.text{
+    border-bottom:1px solid lightgrey;
+    border-top: 1px solid lightgray;
+}
+
+td{
+    padding:2%;
+    border:none;
+}
+
+.text  tr:last-child >td:last-child{
+    
+    border-left: 1px solid lightgray;
+    
+}
+
+.text tr:last-child{
+    border-top: 1px solid lightgray ;
+}
+
+
+h1{
+    text-align: center;
+    color: #1A4645;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: auto;
+}
+
+label{
+    color: #293241;
+    font-size: small;
+    font-weight: bold;
+}
+
+input{
+    border:none;
+    /* margin:auto; */
+    width: 100%;
+}
+
+input[type=text] {
+    color: grey;
+    outline:none;
+}
+
+
+
+input[type=date] {
+    outline: none;
+    color: grey;
+}
+
+::placeholder{
+    color: lightgray;
+}
+
+select{
+    outline: none;
+    border:none;
+    color: grey;
+}
+
+button{
+    border:1px solid black;
+    align-content: center;
+    margin-top:2%;
+    margin-left: 2%;
+    cursor: pointer;
+    border-radius: 5%;
+}
+
+.addtask{
+  background-color: #266867; 
+  color: white;
+  text-align: center;
+  font-size:small; 
+  font-family:Arial, Helvetica, sans-serif
+}
+
+.remove{
+    background-color: rgb(90, 4, 4); 
+    color: white;
+    text-align: center;
+    font-size:small; 
+    font-family:Arial, Helvetica, sans-serif;
+    margin-left:2%;
+    border: .5px solid black;
+    width: 10%
+}
+
+
+.flex-parent {
+    display: flex;
+  }
+  
+  .jc-center {
+    justify-content: center;
+  }
+  
+  button.margin-right {
+    margin-right:2%;
+  }
+
+  .display{
+    margin:3%;
+    justify-content: left;
+    width: auto;
+  }
+
+
+
+.duedate{
+    margin-top:1%;
+    margin-left: 10%;
+}
+
+
+
+hr{
+    background-color: #F58800;
+}
+
+p{
+    font-size: medium;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+
+.tlist{
+    color:#1A4645;
+   
+}
+
+#icon{
+    color: rgb(97, 33, 33);
+ 
+}
+
+.dis tr:first-child>td:last-child{
+    width: 50px;
+    text-align: center;
+}
+
+
+
+

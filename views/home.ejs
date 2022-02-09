@@ -1,0 +1,87 @@
+<html>
+    <head>
+      <title>
+          <%= locals.title%>
+      </title>
+      <link rel="stylesheet" href="/css/home.css">
+      <script src="https://kit.fontawesome.com/415402b1ac.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <!-- <script src="/momentjs/lib/moment/moment-with-locales.js"></script> -->
+        <div class="square">
+        <h1>TODO App</h1>
+        
+       <div ><table class="text">
+           
+           <form action="/create-things" method="POST" class="addlist">
+            <tr>
+                <td colspan="2">
+               <label for="">DESCRIPTION<br>
+               <input type="text" name="description" placeholder="What do you want to do" required>
+            </label>
+            <td>
+        </tr>
+                   <tr>
+                       <td>
+               <label>CATEGORY<br>
+               <select name ="category" placeholder="choose a category" required>
+                   <option>choose a category</option>
+                   <option value="personal" select>Personal</option>
+                   <option value="work">Work</option>
+                   <option value="school">School</option>
+                   <option value="cleaning">Cleaning</option>
+                   <option value="other">Others</option>
+               </select>
+               </label>
+                       </td>
+                       <td>
+               <label>DUE DATE<br>
+               <input type="date" name="date" required></label>
+               </td>
+               </tr>
+            </table>
+            <div class="flex-parent jc-center">
+               <button type="submit" class="addtask"><i class="fas fa-plus"></i> ADD TASK</button>
+        </div>
+           </form>
+           
+           </div>
+           <br>
+           <Div>
+               
+                
+               <form  action="/delete-list">
+                
+<h2>Task List</h2>
+                   <% for(let i of todo_list){%>
+                      
+ 
+                    <table class="dis">
+                    <tr >
+                       <td >
+                       
+                        <p style="font-size: large; font-weight: bold;"> <%=i.description %>   (<%= i.category %>)</p>
+                 </td>
+                 <td>
+                    <a href="/delete-list/?id=<%=i._id%>">
+                        <i id="icon" class="fas fa-trash"></i>
+                 </a>
+                     
+                 
+                 </td>
+                </tr>
+                    <tr>
+                     
+                    <td colspan="2">
+              
+                        <p><i class="fas fa-calendar"></i> <%= i.date.toLocaleDateString("en-US") %> </p>
+                    </i>
+                    </td>
+                    </tr>
+                    <hr>
+                </table>
+                   <% }%>
+           </Div>
+        </div>
+    </body>
+</html>
